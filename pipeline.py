@@ -17,7 +17,7 @@ def reverse(a: str) -> NamedTuple("outputs", [("before", str), ("after", str)]):
 
 @pipeline(name="basic-pipeline", description="A simple intro pipeline",
           pipeline_root='gs://tron-302502-bucket/basic-pipe')
-def basic_pipeline(a: str='stres', b: str='sed'):
+def basic_pipeline(a: str='testing1', b: str='testing2'):
     concat_task = concat(a,b)
     reverse_task = reverse(concat_task.output)
     
