@@ -18,7 +18,7 @@ def op(a: float, b: float) -> float:
 
 @pipeline(name="{}".format(pipeline_name), description="A simple intro pipeline",
           pipeline_root='gs://tron-302502-bucket/basic-pipe')
-def basic_pipeline(a: str='testing1', b: str='testing2'):
+def basic_pipeline(a: float=468, b: float=864):
     op_task = op(a,b)
     
 if __name__ == '__main__':
