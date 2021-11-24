@@ -10,7 +10,7 @@ import time
 
 timestr = time.strftime("%H%M")
 pipeline_name='pipe-{}'.format(timestr)
-compiled_pipe='pipeline_1'
+compiled_pipe='basic_pipeline_1'
 
 @component
 def op(a: float, b: float) -> float:
