@@ -23,5 +23,5 @@ def basic_pipeline(a: str='testing1', b: str='testing2'):
     
 if __name__ == '__main__':
     compiler.Compiler().compile(
-        pipeline_func=basic_pipeline, package_path="basic_pipeline_2.json"
+        pipeline_func=basic_pipeline, package_path="basic_pipeline_1.json"
     )
