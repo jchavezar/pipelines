@@ -10,6 +10,6 @@ steps:
       id: 'compile'
     
     - name: 'gcr.io/cloud-builders/gsutil'
-      args: ['cp', 'basic_pipeline_2.json', 'gs://tron-302502-bucket/aut']
+      args: ['cp', 'basic_pipeline_1.json', 'gs://tron-302502-bucket/aut']
       id: 'upload'
       waitFor: ['compile']
