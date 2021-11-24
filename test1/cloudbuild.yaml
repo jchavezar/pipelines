@@ -1,14 +1,14 @@
 steps:
     - name: python
       entrypoint: pip
-      args: ["install", "-r", "requirements.txt", "--user"]
+      args: ["install", "-r", "test1/requirements.txt", "--user"]
     
     - name: 'python'
       entrypoint: 'python'
-      args: ['pipeline.py']
+      args: ['test1/pipeline.py']
       id: 'compile'
     
     - name: 'gcr.io/cloud-builders/gsutil'
-      args: ['cp', 'basic_pipeline_1.json', 'gs://tron-302502-bucket/aut']
+      args: ['cp', 'test1/basic_pipeline_1.json', 'gs://tron-302502-bucket/aut']
       id: 'upload'
       waitFor: ['compile']
