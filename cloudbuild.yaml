@@ -1,5 +1,8 @@
 
 steps:
+    - name: 'gcr.io/cloud-builders/docker'
+      args: ['buid', '-t', 'gcr.io/tron-302502/kfp/custom:v1', '.']
+
     - name: python
       entrypoint: pip
       args: ["install", "-r", "requirements.txt", "--user"]
