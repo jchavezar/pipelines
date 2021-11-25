@@ -17,6 +17,7 @@ BUCKET_NAME="gs://" + PROJECT_ID + "-bucket"
 IMAGE_URI='gcr.io/tron-302502/kfp/custom:v1'
 PIPELINE_ROOT = f"{BUCKET_NAME}/pipeline_root/"
 REGION = 'us-central1'
+BIGQUERY_DESTINATION = 'bq://{}'.format(PROJECT_ID)
 
 
 @pipeline(name="{}".format(pipeline_name), description="A simple intro pipeline",
@@ -26,7 +27,7 @@ def pipeline(
     project: str = PROJECT_ID,
     gcp_region: str = REGION,
     container_uri: str = IMAGE_URI,
-    bigquery_destination: str = f"bq://{}".format(PROJECT_ID),
+    bigquery_destination: str = BIGQUERY_DESTINATION,
 ):
     dataset_create_op = gcc_aip.TabularDatasetCreateOp(
         display_name="tabular-beans-dataset",
