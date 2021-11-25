@@ -2,6 +2,9 @@
 steps:
     - name: 'gcr.io/cloud-builders/docker'
       args: ['build', '-t', 'gcr.io/tron-302502/kfp/custom:v1', '.']
+      
+    - name: 'gcr.io/cloud-builders/docker'
+      args: ['push','gcr.io/tron-302502/kfp/custom:v1']
 
     - name: python
       entrypoint: pip
