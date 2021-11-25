@@ -48,5 +48,5 @@ def pipeline(
     
 if __name__ == '__main__':
     compiler.Compiler().compile(
-        pipeline_func=basic_pipeline, package_path="{}.json".format(compiled_pipe)
+        pipeline_func=pipeline, package_path="{}.json".format(compiled_pipe)
     )
