@@ -6,6 +6,7 @@ from typing import NamedTuple
 from kfp.v2.dsl import pipeline
 from kfp.v2.dsl import component
 from kfp.v2 import compiler
+from google_cloud_pipeline_components import aiplatform as gcc_aip
 import time
 
 timestr = time.strftime("%H%M")
